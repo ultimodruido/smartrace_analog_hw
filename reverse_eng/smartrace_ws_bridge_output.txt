@@ -1,0 +1,106 @@
+#############
+Short summary
+#############
+tablet <<< sensor
+{"type":"api_version"}
+
+tablet >>> sensor
+{"type":"update_controller_data","data":
+{"1":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(28, 237, 175)","driver":"Gigi"},
+"2":{"color":"black","backgroundColor":"rgb(254, 249, 17)","driver":"Diogo"},
+"3":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"},
+"4":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"},
+"5":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"},
+"6":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"}}}
+
+tablet >>> sensor
+{"type":"update_server_info","data":{"is_subscribed":false}}
+
+tablet >>> sensor
+{"type":"api_version","data":{"api_version":6}}
+
+tablet <<< sensor // selected analog sensor on app
+{"type":"controller_set","data":{"controller_id":"Z"}}
+
+tablet <<< sensor
+{"type":"analog_lap","data":{"timestamp":1722773108999,"controller_id":2}}
+
+tablet <<< sensor
+{"type":"analog_lap","data":{"timestamp":1722773109119,"controller_id":1}}
+
+tablet <<< sensor
+{"type":"analog_pit_enter","data":{"controller_id":2}}
+
+tablet <<< sensor
+{"type":"analog_pit_leave","data":{"controller_id":2}}
+
+#############
+Full output
+#############
+
+ws://192.168.178.26:50780
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"api_version"}
+Server comm: send to tablet
+### tablet2sensor ###
+Server comm: read from tablet
+tablet >>> sensor
+{"type":"update_controller_data","data":
+{"1":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(28, 237, 175)","driver":"Gigi"},
+"2":{"color":"black","backgroundColor":"rgb(254, 249, 17)","driver":"Diogo"},
+"3":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"},
+"4":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"},
+"5":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"},
+"6":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"}}}
+### tablet2sensor ###
+Server comm: read from tablet
+tablet >>> sensor
+{"type":"update_server_info","data":{"is_subscribed":false}}
+### tablet2sensor ###
+Server comm: read from tablet
+tablet >>> sensor
+{"type":"api_version","data":{"api_version":6}}
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"controller_set","data":{"controller_id":"Z"}}
+Server comm: send to tablet
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"analog_lap","data":{"timestamp":1722773108999,"controller_id":2}}
+Server comm: send to tablet
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"analog_lap","data":{"timestamp":1722773109119,"controller_id":1}}
+Server comm: send to tablet
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"analog_pit_enter","data":{"controller_id":2}}
+Server comm: send to tablet
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"analog_pit_leave","data":{"controller_id":2}}
+Server comm: send to tablet
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"analog_lap","data":{"timestamp":1722773112733,"controller_id":2}}
+Server comm: send to tablet
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"analog_lap","data":{"timestamp":1722773112764,"controller_id":1}}
+Server comm: send to tablet
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"analog_lap","data":{"timestamp":1722773115457,"controller_id":2}}
+Server comm: send to tablet
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"analog_lap","data":{"timestamp":1722773115528,"controller_id":1}}
+Server comm: send to tablet
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"analog_lap","data":{"timestamp":1722773128339,"controller_id":1}}
+Server comm: send to tablet
+### sensor2tablet ###
+tablet <<< sensor
+{"type":"analog_lap","data":{"timestamp":1722773128345,"controller_id":2}}
