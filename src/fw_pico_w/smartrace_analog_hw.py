@@ -181,19 +181,17 @@ async def ws_handshake():
         websocket_handshake_status = False
 
 
-
-
 async def smartrace_connect():
     global websocket
     global websocket_handshake_status
 
     await asyncio.sleep_ms(30)
     # connect to smartrace
-    print("1")
+    print("Step 1: request api version")
     websocket.send('{"type":"api_version"}')
     await asyncio.sleep_ms(30)
     # drop 3 messages from smartrace
-    print("2")
+    print("Step 2: read smartrace responce")
     websocket.recv()
     await asyncio.sleep_ms(30)
     websocket.recv()
@@ -201,11 +199,11 @@ async def smartrace_connect():
     websocket.recv()
     await asyncio.sleep_ms(30)
     # send configuration for analog sensor
-    print("3")
+    print("Step 3: register as analog sensor")
     websocket.send('{"type": "controller_set", "data": {"controller_id": "Z"}}')
     await asyncio.sleep_ms(30)
     websocket_handshake_status = True
-    print("...handshaked.")
+    print("Websocket handshake completed!")
 
 
 def ws_message_create(lap_time):
@@ -232,7 +230,7 @@ async def ws_transmission_task():
     global wifi
     global smartrace_need_reconnect_flag
 
-    #counter = 0
+    # initialize the backup for a unsused lane (Smartrace handles max 8)
     lap_data_backup = ('FL', 12, 1000)
 
     while True:
