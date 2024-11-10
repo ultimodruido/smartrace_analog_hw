@@ -95,7 +95,8 @@ check the file [config_example.py](./src/fw_pico_w/config_example.py), it is eas
 ## Installing the firmware
 Install the micropython firmware (at least version 1.23, due to the implementation
 of collection.deque) following
-[this guide](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/3).
+[this guide](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/3). For simplicity, a copy of the firmware file (RPI_PICO_W-20240602-v1.23.0.uf2) 
+is available in the mycropython folder 
 
 then install `mpremote` ( with `pip install mpremote`) to copy files onto the pi pico:
 
@@ -108,13 +109,6 @@ cd uwebsockets
 python -m mpremote fs mkdir :uwebsockets
 python -m mpremote fs cp client.py :uwebsockets/
 python -m mpremote fs cp protocol.py :uwebsockets/
-
-cd ..
-cd socketio
-python -m mpremote fs mkdir :usocketio
-python -m mpremote fs cp client.py :usocketio/
-python -m mpremote fs cp protocol.py :usocketio/
-python -m mpremote fs cp transport.py :usocketio/
 ```
 
 ## Known issues & workarounds
