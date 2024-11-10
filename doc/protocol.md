@@ -21,18 +21,18 @@ _Smartrace_ sends 3 replies
 ```
 smartrace >>> sensor
 {"type":"update_controller_data","data":
-{"1":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(28, 237, 175)","driver":"Alex"},
-"2":{"color":"black","backgroundColor":"rgb(254, 249, 17)","driver":"Barbara"},
-"3":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"},
-"4":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"},
-"5":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"},
-"6":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato"}}}
+{"1":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(28, 237, 175)","driver":"Nic","car":"BMW M4"},
+"2":{"color":"black","backgroundColor":"rgb(254, 249, 17)","driver":"Alex","car":"Ferrari 488"},
+"3":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato","car":"Non assegnato"},
+"4":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato","car":"Non assegnato"},
+"5":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato","car":"Non assegnato"},
+"6":{"color":"rgb(0, 0, 0)","backgroundColor":"rgb(188, 195, 188)","driver":"Non assegnato","car":"Non assegnato"}}}
 
 smartrace >>> sensor
 {"type":"update_server_info","data":{"is_subscribed":false}}
 
 smartrace >>> sensor
-{"type":"api_version","data":{"api_version":6}}
+{"type":"api_version","data":{"api_version":7}}
 ```
 
 The sensor registers itself as an analog sensor
